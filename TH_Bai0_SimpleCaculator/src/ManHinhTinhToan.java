@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
+import javax.swing.border.TitledBorder;
 
 public class ManHinhTinhToan extends JFrame {
 	private static final long serialVersionUID = 1L;
@@ -24,7 +25,8 @@ public class ManHinhTinhToan extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 575, 350);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		contentPane.setBackground(new Color(204, 255, 255));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
@@ -49,6 +51,8 @@ public class ManHinhTinhToan extends JFrame {
 		contentPane.add(txtB);
 		
 		JButton btnCong = new JButton("CỘNG");
+		btnCong.setForeground(Color.RED);
+		btnCong.setBackground(new Color(255, 255, 255));
 		btnCong.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//Code xử lý cộng
@@ -60,6 +64,7 @@ public class ManHinhTinhToan extends JFrame {
 		contentPane.add(btnCong);
 		
 		JButton btnTru = new JButton("TRỪ");
+		btnTru.setForeground(Color.RED);
 		btnTru.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//code xử lý trừ
@@ -71,6 +76,7 @@ public class ManHinhTinhToan extends JFrame {
 		contentPane.add(btnTru);
 		
 		JButton btnNhan = new JButton("NHÂN");
+		btnNhan.setForeground(Color.RED);
 		btnNhan.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//code xu ly nhan
@@ -82,6 +88,7 @@ public class ManHinhTinhToan extends JFrame {
 		contentPane.add(btnNhan);
 		
 		JButton btnChia = new JButton("CHIA");
+		btnChia.setForeground(Color.RED);
 		btnChia.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//code xu ly chia
@@ -93,8 +100,8 @@ public class ManHinhTinhToan extends JFrame {
 		contentPane.add(btnChia);
 		
 		txtKQ = new JTextField();
-		txtKQ.setForeground(Color.RED);
-		txtKQ.setBackground(Color.WHITE);
+		txtKQ.setForeground(new Color(255, 255, 255));
+		txtKQ.setBackground(new Color(255, 255, 255));
 		txtKQ.setEnabled(false);
 		txtKQ.setFont(new Font("Tahoma", Font.BOLD, 16));
 		txtKQ.setColumns(10);
